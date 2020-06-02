@@ -2,7 +2,7 @@
 
 ## Dark Mode is comming
 
-> Project status: Under Development :warning:
+> Project Status: Development :warning:
 
 ### participants: 
 |name|email|present|
