@@ -1,3 +1,6 @@
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/williamkoller/nlw)
+
 # Development Next Level Week 
 
 ## Dark Mode is comming
