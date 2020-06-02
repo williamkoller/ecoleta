@@ -1,5 +1,6 @@
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/williamkoller/nlw)
+![GitHub commit merge status](https://img.shields.io/github/commit-status/williamkoller/nlw/master/08cba60)
 
 # Development Next Level Week 
 
