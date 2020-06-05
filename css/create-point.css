@@ -85,6 +85,7 @@ form {
  form .field-group {
    display: flex;
    
+   
  }
  
  form input, form select {
@@ -121,7 +122,7 @@ form {
    font-weight: bold;
    font-size: 16px;
    border: 0;
-   margin-top: 20px;
+   margin-top: 40px;
    transition: background-color 400ms;
 
  }
