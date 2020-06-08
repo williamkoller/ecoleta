@@ -113,3 +113,8 @@
   color: rgb(36, 30, 30);
   text-align: center;
 } 
+
+h1, h2 h3, h5 {
+  font-family: Ubuntu, sans-serif;
+  color: var(--title-color);
+}
