@@ -27,7 +27,7 @@
 
 #page-create-point header a span {
   margin-right: 16px;
-  background-image: url('../assets/arrow-left.svg');
+  background-image: url('../../public/assets/arrow-left.svg');
   
   display: flex;
   

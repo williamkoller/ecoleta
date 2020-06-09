@@ -1,0 +1,28 @@
+{
+  "name": "nlw",
+  "version": "2.1.0",
+  "description": "Next Level Week",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamkoller/nlw.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "HTML",
+    "CSS"
+  ],
+  "author": "William Koller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamkoller/nlw/issues"
+  },
+  "homepage": "https://github.com/williamkoller/nlw#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
