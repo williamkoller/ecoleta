@@ -7,10 +7,8 @@ server.use(express.static('public'))
 
 const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
-  autoescape: true,
   express: server,
   noCache: true,
-  watch: true
 })
 
 

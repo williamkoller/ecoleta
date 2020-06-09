@@ -95,7 +95,12 @@ form {
  form .field-group {
    display: flex;
    
-   
+ }
+ 
+ ::-webkit-scrollbar-thumb form .field-group .field select {
+  box-shadow: 0 0 0 grey;
+  border-radius: 2px;
+  
  }
  
  form input, form select {
@@ -108,6 +113,28 @@ form {
    border: 2px solid #08be5d;
    /* outline: none; */
  }
+ 
+ /* width */
+::-webkit-scrollbar  {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow:  0 0 0 grey; 
+  border-radius: 2px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #34cb79
+}
  
  form select {
   -webkit-appearance: none;
