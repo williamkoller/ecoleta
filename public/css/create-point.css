@@ -27,7 +27,7 @@
 
 #page-create-point header a span {
   margin-right: 16px;
-  background-image: url('../../public/assets/arrow-left.svg');
+  background-image: url('../assets/arrow-left.svg');
   
   display: flex;
   
@@ -67,13 +67,23 @@ form {
  form legend {
    margin-bottom: 40px;
    
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
  }
  
  form legend h2 {
    font-size: 24px;
    color: #F0F0F5;
+   
+  
  }
- 
+ form legend span {
+   font-size: 14px;
+   color: var(--title-color); 
+  
+ }
  form .field {
    flex: 1;
    display: flex;
