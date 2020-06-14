@@ -45,19 +45,20 @@ server.get('/search', (req, res) => {
   })
 })
 
-// server.use((req, res, next) => {
-//   const erro = new Error('Not Found')
-//   erro.status = 404
-//   next(erro)
-// })
+server.use((req, res, next) => {
+  const erro = new Error('Not Found')
+  erro.status = 404
+  next(erro)
+})
 
-// server.use((error, req, res, next) => {
-//   res.status(error.status || 500)
-//   return res.send({
-//     erro: {
-//       message: error.message,
-//     },
-//   })
-// })
+server.use((error, req, res, next) => {
+  res.status(error.status || 500)
+  return res
+    .send({
+      erro: {
+        message: error.message,
+      },
+    })
+})
 
 module.exports = server
