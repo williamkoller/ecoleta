@@ -1,0 +1,9 @@
+{
+  "env": {
+    "MYSQL_USER": "admin",
+    "MYSQL_PASSWORD": "developer30",
+    "MYSQL_DABATASE": "ecoleta",
+    "MYSQL_HOST": "localhost",
+    "MYSQL_PORT": 5050
+  }
+}
