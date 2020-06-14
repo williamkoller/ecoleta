@@ -1,6 +1,6 @@
 {
   "name": "nlw",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Next Level Week",
   "main": "server.js",
   "scripts": {
@@ -9,12 +9,13 @@
   "author": "William Koller",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nunjucks": "^3.2.1",
-    "sqlite3": "^4.2.0"
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "mysql": "^2.18.1",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }
 }
