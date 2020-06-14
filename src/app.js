@@ -33,7 +33,7 @@ server.get('/search', (req, res) => {
   }
   mysql.getConnection((error, conn) => {
     conn.query(
-      `SELECT * FROM  ecoleta.places  WHERE city LIKE '%${search}%'`,
+      `SELECT * FROM  ${process.env.MYSQL_DATABASE}.places  WHERE city LIKE '%${search}%'`,
       (err, rows) => {
         if (err) {
           return console.error(err)
@@ -53,12 +53,11 @@ server.use((req, res, next) => {
 
 server.use((error, req, res, next) => {
   res.status(error.status || 500)
-  return res
-    .send({
-      erro: {
-        message: error.message,
-      },
-    })
+  return res.send({
+    erro: {
+      message: error.message,
+    },
+  })
 })
 
 module.exports = server
