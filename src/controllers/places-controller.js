@@ -13,7 +13,7 @@ exports.getPlaces = (req, res, next) => {
       return res.status(500).send({ error: error })
     }
 
-    conn.query('SELECT * FROM ecoleta.places', (error, result, fields) => {
+    conn.query('SELECT * FROM places', (error, result, fields) => {
       if (error) {
         return res.status(500).send({ error: error })
       }
@@ -47,7 +47,7 @@ exports.postPlaces = (req, res, next) => {
       return res.status(500).send({ error: error })
     }
     conn.query(
-      'INSERT INTO ecoleta.places (image, name, address, complement_number, state, city, items) VALUES (?,?,?,?,?,?,?)',
+      'INSERT INTO places (image, name, address, complement_number, state, city, items) VALUES (?,?,?,?,?,?,?)',
       [
         req.body.image,
         req.body.name,
