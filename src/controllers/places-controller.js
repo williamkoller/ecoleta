@@ -13,31 +13,34 @@ exports.getPlaces = (req, res, next) => {
       return res.status(500).send({ error: error })
     }
 
-    conn.query('SELECT * FROM places', (error, result, fields) => {
-      if (error) {
-        return res.status(500).send({ error: error })
-      }
-      const response = {
-        amount: result.length,
-        places: result.map((place) => {
-          return {
-            id: place.id,
-            image: place.image,
-            name: place.name,
-            address: place.address,
-            complement_number: place.complement_number,
-            state: place.state,
-            city: place.city,
-            items: place.items,
-            request: {
-              type: 'GET',
-              desc: 'Return the details of places',
-            },
-          }
-        }),
-      }
-      return res.status(200).send(response)
-    })
+    conn.query(
+      `SELECT * FROM ${process.env.MYSQL_DATABASE}.places`,
+      (error, result, fields) => {
+        if (error) {
+          return res.status(500).send({ error: error })
+        }
+        const response = {
+          amount: result.length,
+          places: result.map((place) => {
+            return {
+              id: place.id,
+              image: place.image,
+              name: place.name,
+              address: place.address,
+              complement_number: place.complement_number,
+              state: place.state,
+              city: place.city,
+              items: place.items,
+              request: {
+                type: 'GET',
+                desc: 'Return the details of places',
+              },
+            }
+          }),
+        }
+        return res.status(200).send(response)
+      },
+    )
   })
 }
 
@@ -47,7 +50,7 @@ exports.postPlaces = (req, res, next) => {
       return res.status(500).send({ error: error })
     }
     conn.query(
-      'INSERT INTO places (image, name, address, complement_number, state, city, items) VALUES (?,?,?,?,?,?,?)',
+      `INSERT INTO ${process.env.MYSQL_DATABASE}.places (image, name, address, complement_number, state, city, items) VALUES (?,?,?,?,?,?,?)`,
       [
         req.body.image,
         req.body.name,
