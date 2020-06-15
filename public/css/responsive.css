@@ -36,8 +36,15 @@
     margin-left: 0;
   }
 
-  #page-create-point fieldset legend .items-grid {
-    margin-right: 50%;
+  #page-create-point {
+    background-position-x: 90vw;
+  }
+
+  #page-create-point form fieldset {
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+    border: 0;
   }
 }
 
@@ -49,18 +56,6 @@
 
 @media (max-height: 760px) {
   #page-home {
-    background-position-y: 200px;
-  }
-}
-
-@media (min-width: 1700px) {
-  #page-create-point {
-    background-position-x: 40vw;
-  }
-}
-
-@media (max-height: 760px) {
-  #page-create-point {
     background-position-y: 200px;
   }
 }
